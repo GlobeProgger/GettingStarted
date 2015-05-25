@@ -1,0 +1,6 @@
+	<p>
+		<strong><%= comment.commenter %></strong>:	<%= comment.body %>
+		<%= link_to 'Remove', article_comments_path(article_id: comment.article, id: comment),
+		               method: :delete,
+		               data: { confirm: "Are you sure you want to delete the comment of #{comment.commenter}?" } %>
+	</p>
